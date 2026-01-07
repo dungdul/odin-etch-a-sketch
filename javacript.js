@@ -17,11 +17,12 @@ function createGrid(gridDimension) {
 }
 
 function resetGrid() {
-    // Prompt grid's dimension from user until user gives a valid input
-    let dimension;
-    do {
-        dimension = Number(prompt("Number of squares per side (1-100)"));
-    } while (!Number.isInteger(dimension) || dimension < 1 || dimension > 100);
+    // Prompt user for grid's dimension and check validity
+    let dimension = Number(prompt("Number of squares per side (1-100)"));
+    if (!Number.isInteger(dimension) || dimension < 1 || dimension > 100) {
+        alert("Please input a valid number");
+        return;
+    }
 
     // Rewrite the grid
     containerDiv.innerHTML = "";
