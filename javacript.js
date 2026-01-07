@@ -10,6 +10,9 @@ function createGrid(gridDimension) {
         let squareSize = CONTAINER_SIZE / gridDimension;
         squareDiv.style.cssText = `width: ${squareSize}px; height: ${squareSize}px;`
         squareDiv.style.border = "1px solid black"; // For debugging
+
+        // Make the squares change their color when mouse cursor passes over them
+        squareDiv.addEventListener("mouseenter", () => {squareDiv.style.backgroundColor = "black"});
     }
 }
 
