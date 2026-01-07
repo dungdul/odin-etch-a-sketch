@@ -5,12 +5,8 @@
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 28px;
+    text-align: center;
 }
 
 h1 {
@@ -18,14 +14,22 @@ h1 {
     margin-bottom: 28px;
 }
 
+.button-container {
+    display: flex;
+    margin-bottom: 32px;
+    justify-content: center;
+    gap: 24px;
+
+}
+
 button {
     font-size: 16px;
     padding: 2px 12px;
-    margin-bottom: 32px;
 }
 
 .container {
     border: 1px solid black;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
 }

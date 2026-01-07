@@ -1,6 +1,6 @@
+// Specify container's size
 const CONTAINER_SIZE = 600;
 const containerDiv = document.querySelector(".container");
-
 containerDiv.style.cssText = `width: ${CONTAINER_SIZE}px; height: ${CONTAINER_SIZE}px`
 
 function createGrid(gridDimension) {
@@ -16,7 +16,7 @@ function createGrid(gridDimension) {
     }
 }
 
-function resetGrid() {
+function newGrid() {
     // Prompt user for grid's dimension and check validity
     let dimension = Number(prompt("Number of squares per side (1-100)"));
     if (!Number.isInteger(dimension) || dimension < 1 || dimension > 100) {
@@ -29,6 +29,10 @@ function resetGrid() {
     createGrid(dimension);
 }
 
-document.querySelector("button").onclick = resetGrid;
+document.querySelector("#new-grid").onclick = newGrid;
+document.querySelector("#clear").onclick = () => {
+    document.querySelectorAll(".container > div").forEach((squareDiv) => {squareDiv.style.backgroundColor = ""})
+};
 
+// Render 16*16 grid by default
 createGrid(16)
