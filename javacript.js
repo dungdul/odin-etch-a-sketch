@@ -1,4 +1,4 @@
-const CONTAINER_SIZE = 960;
+const CONTAINER_SIZE = 600;
 const containerDiv = document.querySelector(".container");
 
 containerDiv.style.cssText = `width: ${CONTAINER_SIZE}px; height: ${CONTAINER_SIZE}px`
@@ -8,7 +8,7 @@ function createGrid(gridDimension) {
         let squareDiv = document.createElement("div");
         containerDiv.append(squareDiv);
         let squareSize = CONTAINER_SIZE / gridDimension;
-        squareDiv.style.cssText = `width: ${squareSize}px; height: ${squareSize}px;`;
+        squareDiv.style.cssText = `box-sizing: border-box; width: ${squareSize}px; height: ${squareSize}px;`;
         squareDiv.style.border = "1px solid black"; // For debugging
 
         // Make the squares change their color when mouse cursor passes over them
