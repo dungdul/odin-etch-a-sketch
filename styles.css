@@ -27,6 +27,11 @@ button {
     padding: 2px 12px;
 }
 
+button.activated {
+    background-color: brown;
+    color: snow;
+}
+
 .container {
     border: 1px solid black;
     margin: 0 auto;
